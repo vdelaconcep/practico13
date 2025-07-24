@@ -35,7 +35,7 @@
 }
 
 .home-title-movies {
-    color: transparent;
+    color: rgba(0, 0, 0, 0.2);
     font-weight: 100;
     -webkit-text-stroke: 1px white;
 }
@@ -76,7 +76,7 @@
     font-size: 1.7em;
     background-color: #26B0DF;
     color: white;
-    border-color: black;
+    border: none;
     border-radius: 40px;
     padding-left: 30px;
     padding-right: 30px;
@@ -84,9 +84,8 @@
     width: 250px;
 }
 
-.home-button:hover {
-    background-color: #26B0DF;
-    border-color: black;
-    color: white;
-    box-shadow: inset 0px 0px 8px black;
+.home-button:hover, .home-button:active {
+    background-color: #26B0DF !important;
+    color: white !important;
+    box-shadow: 0px 0px 10px white !important;
 }

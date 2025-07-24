@@ -25,18 +25,23 @@ header {
     flex-wrap: wrap;
 }
 
-.hal {
+.catalog-headerTitle {
     font-family: 'AudioWide';
-    font-weight: bolder;
-    text-shadow: 2px 2px 3px black;
 }
 
-main {
-    padding-top: 45px;
+.catalog-headerTitle-hal {
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px black;
+}
+
+.catalog-headerTitle-movies {
+    color: rgba(0,0,0,0.2);
+    font-weight: 100;
+    -webkit-text-stroke: 1px white;
 }
 
 .catalog-selectGenre, .catalog-searchTitle, .catalog-searchTitleButton {
-    height: 30px;
+    height: 35px;
 }
 
 .catalog-selectGenre, .catalog-searchTitle {
@@ -44,10 +49,32 @@ main {
     color: white;
 }
 
+.catalog-selectDiv {
+    position: relative;
+}
+
+.catalog-selectChevron {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    color: #bebebe;
+    font-size: 0.15em;
+}
+
 .catalog-selectGenre {
-    border-radius: 5px;
-    width: 150px;
-    padding-left: 5px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.3);
+    width: 220px;
+    padding-left: 15px;
+    color: #bebebe;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.catalog-selectGenre:valid {
+    color: white;
 }
 
 @media (max-width: 576px) {
@@ -68,19 +95,43 @@ main {
     }
 }
 
+.catalog-searchDiv {
+    position: relative;
+}
+
 .catalog-searchTitle {
-    padding-left: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    width: 220px;
+    padding-left: 35px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: inset 0px 0px 15px rgba(0,0,0, 0.3);
+}
+
+.catalog-searchTitle::-webkit-search-decoration,
+.catalog-searchTitle::-webkit-search-cancel-button,
+.catalog-searchTitle::-webkit-search-results-button,
+.catalog-searchTitle::-webkit-search-results-decoration {
+    display: none;
+}
+
+.catalog-searchTitle:focus {
+    border: none !important;
 }
 
 .catalog-searchTitleButton {
-    padding: 0 6px 0 5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: #26B0DF;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: transparent;
+    border: none !important;
+    color: gray;
+    font-size: 0.2em;
 }
 
-.catalog-searchIcon {
-    font-size: 1em;
+.catalog-searchTitleButton, .catalog-searchTitle::placeholder {
+    color: #bebebe;
+}
+
+main {
+    padding-top: 45px;
 }

@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Iceland';
+    src: url('../../assets/fonts/Iceland-Regular.ttf');
+}
+
 .list-filter {
-    font-weight: 100;
+    font-family: 'Iceland';
+    font-size: 2.5em;
     color: darkgrey;
 }
 

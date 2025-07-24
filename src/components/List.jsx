@@ -1,16 +1,19 @@
 import axios from 'axios';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import MovieDetail from './MovieDetail';
 import noImage from '../assets/img/noImage.jpg';
 import './css/list.css'
 
-const List = ({filter, filterName}) => {
+const List = ({filter, filterName, setSelectedGenre, setSelectedGenreName}) => {
 
     const [data, setData] = useState(null);
     const [page, setPage] = useState(1);
     const [isMore, setIsMore] = useState(true);
     const lastElementRef = useRef();
     const [loading, setLoading] = useState(false);
+    const [chosenMovie, setChosenMovie] = useState('');
+    const [showChosenMovie, setShowChosenMovie] = useState(false);
 
     const navigate = useNavigate();
 
@@ -80,7 +83,9 @@ const List = ({filter, filterName}) => {
         };
     };
 
-    const listTitle = filterName ? filterName : 'Popular movies'
+    // Título de la lista mostrada
+    const listTitle = filterName ? filterName : 'Most popular';
+
 
     return (
         <>
@@ -96,7 +101,10 @@ const List = ({filter, filterName}) => {
                         <div
                             key={movie.id}
                             className='list-movieDiv'
-                            onClick={() => navigate(`/movieDetail/${movie.id}`)}>
+                            onClick={() => {
+                                setChosenMovie(movie.id);
+                                setShowChosenMovie(true);
+                            }}>
                                 
                             <article className='list-moviePosterArticle'>
                                 <img className='list-moviePoster' src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : noImage} alt={`${movie.original_title} movie poster`} />
@@ -109,7 +117,14 @@ const List = ({filter, filterName}) => {
                 )}
                 
                 <div ref={lastElementRef}></div>
+                
             </section>
+
+            {showChosenMovie &&
+                <article className='list-MovieDetailArticle'>
+                    <MovieDetail id={chosenMovie} setShowChosenMovie={setShowChosenMovie} setSelectedGenre={setSelectedGenre} setSelectedGenreName={setSelectedGenreName} />
+                </article>
+            }
         </>
     );
 };

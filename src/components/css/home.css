@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'AudioWide';
-    src: url('../../fonts/Audiowide-Regular.ttf');
+    src: url('../../assets/fonts/Audiowide-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Iceland';
-    src: url('../../fonts/Iceland-Regular.ttf');
+    src: url('../../assets/fonts/Iceland-Regular.ttf');
 }
 
 .home-section {

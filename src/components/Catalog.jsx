@@ -90,7 +90,9 @@ const Catalog = () => {
                 <main>
                     <List
                         filter={!searchTitle ? (selectedGenre ? genreFilter : null) : titleFilter}
-                        filterName={!searchTitle ? (selectedGenreName ? `Genre: ${selectedGenreName}` : null) : (title ? `Results for: ${title}` : null)} />
+                        filterName={!searchTitle ? (selectedGenreName ? `Genre: ${selectedGenreName}` : null) : (title ? `Results for: ${title}` : null)}
+                        setSelectedGenre={setSelectedGenre}
+                        setSelectedGenreName={setSelectedGenreName} />
                 </main>
             </div>
         </>

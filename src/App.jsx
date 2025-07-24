@@ -3,7 +3,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home";
 import Catalog from "./components/Catalog";
-import MovieDetail from './components/MovieDetail';
 import './app.css'
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/catalog' element={<Catalog />} />
-        <Route path='/movieDetail/:id' element={<MovieDetail />} />
       </Routes>
     </BrowserRouter>
   );

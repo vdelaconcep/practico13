@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'AudioWide';
+    src: url('../../fonts/Audiowide-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Iceland';
+    src: url('../../fonts/Iceland-Regular.ttf');
+}
+
+.home-section {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../../assets/img/fondo_hal.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+
+.home-title {
+    font-size: 6em;
+    color: white;
+    font-family: 'AudioWide';
+    font-weight: bold;
+}
+
+.home-title-hal {
+    text-shadow: 0px 0px 10px #26B0DF;
+}
+
+.home-title-movies {
+    color: transparent;
+    font-weight: 100;
+    -webkit-text-stroke: 1px white;
+}
+
+@media (max-width: 767px) {
+    .home-section {
+        padding-left: 25px;
+    }
+    .home-title {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 4em;
+    }
+    .home-subtitle {
+        font-size: 1.5em;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .home-button {
+        align-self: center;
+        margin-top: 150px !important;
+    }
+}
+
+.home-subtitle {
+    font-family: 'Iceland';
+    font-weight: 300;
+    font-size: 3em;
+    color: #26B0DF;
+    font-weight: 100;
+}
+
+.home-button {
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1.7em;
+    background-color: #26B0DF;
+    color: white;
+    border-color: black;
+    border-radius: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: inset 0px 0px 20px black;
+    width: 250px;
+}
+
+.home-button:hover {
+    background-color: #26B0DF;
+    border-color: black;
+    color: white;
+    box-shadow: inset 0px 0px 8px black;
+}

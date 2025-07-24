@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'AudioWide';
+    src: url('../../fonts/Audiowide-Regular.ttf');
+}
+
+.catalog-background {
+    min-height: 100vh;
+    background: radial-gradient(at 85% 10%, #202020, black);
+    position: relative;
+}
+
+header {
+    background: rgba(255, 0, 100, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 0, 100, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    max-width: 100%;
+    z-index: 100;
+    height: 45px;
+    flex-wrap: wrap;
+}
+
+.hal {
+    font-family: 'AudioWide';
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px black;
+}
+
+main {
+    padding-top: 45px;
+}
+
+.catalog-selectGenre, .catalog-searchTitle, .catalog-searchTitleButton {
+    height: 30px;
+}
+
+.catalog-selectGenre, .catalog-searchTitle {
+    background-color: #202020;
+    color: white;
+}
+
+.catalog-selectGenre {
+    border-radius: 5px;
+    width: 150px;
+    padding-left: 5px;
+}
+
+@media (max-width: 576px) {
+    header {
+        height: 100px;
+    }
+
+    main {
+        padding-top: 100px;
+    }
+
+    .catalog-selectGenre {
+        width: 180px;
+    }
+
+    .catalog-searchTitle {
+        width: 150px;
+    }
+}
+
+.catalog-searchTitle {
+    padding-left: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.catalog-searchTitleButton {
+    padding: 0 6px 0 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #26B0DF;
+}
+
+.catalog-searchIcon {
+    font-size: 1em;
+}

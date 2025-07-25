@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home";
 import Catalog from "./components/Catalog";
-import './app.css'
+import './App.css'
 
 function App() {
   return (

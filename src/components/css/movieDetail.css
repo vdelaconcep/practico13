@@ -53,7 +53,7 @@
     z-index: 600;
     background-color: transparent;
     border: none;
-    font-size: 0.4em;
+    font-size: 2em;
     color: white;
     text-shadow: 1px 1px 2px black;
     box-shadow: none;
@@ -95,4 +95,25 @@
     background-color: black;
     border-radius: 10px;
     border: 2px solid gray;
+}
+
+@media (max-width: 992px) {
+    .movieDetail-title {
+        font-size: 2.5em;
+    }
+    .movieDetail-intDiv {
+        width: 500px;
+    }
+    .movieDetail-overviewDiv {
+        height: calc(100vh - 280px);
+    }
+}
+
+@media (max-width: 576px) {
+    .movieDetail-title {
+        font-size: 2em;
+    }
+    .movieDetail-overviewDiv {
+        height: calc(100vh - 180px);
+    }
 }

@@ -37,7 +37,7 @@ const MovieDetail = ({id, setShowChosenMovie, setSelectedGenre, setSelectedGenre
                 (movieData ?
                     <>
                         <button
-                        className='movieDetail-closeBtn p-2 ps-3'
+                        className='movieDetail-closeBtn ps-3 pt-md-1'
                         type='button'
                         onClick={() => setShowChosenMovie(false)}>
                             <i className="fa-solid fa-arrow-left"></i>

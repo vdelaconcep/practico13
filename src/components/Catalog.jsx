@@ -36,23 +36,26 @@ const Catalog = () => {
     // Para buscar películas por título
     const [title, setTitle] = useState('');
     const [searchTitle, setSearchTitle] = useState(false);
+    const [submittedTitle, setSubmittedTitle] = useState('');
 
-    const titleFilter = title ? `/search/movie?query=${encodeURIComponent(title)}&` : null;
+    const titleFilter = submittedTitle ? `/search/movie?query=${encodeURIComponent(submittedTitle)}&` : null;
 
     // Si vuelvo a buscar por género, se inhabilita la búsqueda por título
     useEffect(() => {
         setSearchTitle(false);
-    }, [selectedGenre, setSelectedGenre]);
+        setSubmittedTitle('');
+        setTitle('');
+    }, [selectedGenre]);
 
     return (
         <>
             <div className='catalog-background'>
-                <header className='hstack'>
-                    <h1 className="text-white catalog-headerTitle ms-4 mb-0"><span className='catalog-headerTitle-hal'>HAL</span><span className='catalog-headerTitle-movies'>Movies</span></h1>
-                    <div className='d-flex ms-auto me-3 me-sm-4 flex-column flex-sm-row align-items-end align-items-sm-center' >
+                <header className='d-block d-md-flex align-items-md-center'>
+                    <h1 className="text-white catalog-headerTitle mt-2 mb-2 m-md-0 ms-md-4 d-flex justify-content-center justify-content-md-start"><span className='catalog-headerTitle-hal'>HAL</span><span className='catalog-headerTitle-movies'>Movies</span></h1>
+                    <div className='d-flex ms-0 ms-md-auto mt-2 mt-md-0 me-md-4 justify-content-md-end justify-content-center gap-2' >
                         <div className='catalog-selectDiv'>
                             <select
-                                className='catalog-selectGenre mb-2 mb-sm-0 mt-2 mt-sm-0'
+                                className='catalog-selectGenre'
                                 name="genres"
                                 id="genres"
                                 value={selectedGenre}
@@ -75,8 +78,9 @@ const Catalog = () => {
                         <form onSubmit={(e) => {
                             e.preventDefault();
                             setSearchTitle(true);
+                            setSubmittedTitle(title);
                         }}>
-                            <div className='catalog-searchDiv ms-sm-4'>
+                            <div className='catalog-searchDiv ms-2 ms-md-4'>
                                 <input
                                     className='catalog-searchTitle'
                                     type="search"
@@ -95,7 +99,7 @@ const Catalog = () => {
                 <main>
                     <List
                         filter={!searchTitle ? (selectedGenre ? genreFilter : null) : titleFilter}
-                        filterName={!searchTitle ? (selectedGenreName ? `Genre: ${selectedGenreName}` : null) : (title ? `Results for: ${title}` : null)}
+                        filterName={!searchTitle ? (selectedGenreName ? `Genre: ${selectedGenreName}` : null) : (submittedTitle ? `Results for: ${submittedTitle}` : null)}
                         setSelectedGenre={setSelectedGenre}
                         setSelectedGenreName={setSelectedGenreName} />
                 </main>

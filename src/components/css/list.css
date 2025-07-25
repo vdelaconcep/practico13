@@ -9,6 +9,12 @@
     color: darkgrey;
 }
 
+@media (max-width: 768px) {
+    .list-filter {
+        font-size: 2em;
+    }
+}
+
 .list-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -16,16 +22,13 @@
     justify-items: center;
 }
 
-.list-loading, .list-unableToLoad {
+.list-loading,
+.list-unableToLoad {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 200;
-}
-
-.fa-solid {
-    font-size: 5em;
 }
 
 .list-movieDiv {

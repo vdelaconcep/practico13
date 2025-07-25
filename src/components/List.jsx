@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import MovieDetail from './MovieDetail';
 import noImage from '../assets/img/noImage.jpg';
 import './css/list.css'
@@ -14,8 +13,6 @@ const List = ({filter, filterName, setSelectedGenre, setSelectedGenreName}) => {
     const [loading, setLoading] = useState(false);
     const [chosenMovie, setChosenMovie] = useState('');
     const [showChosenMovie, setShowChosenMovie] = useState(false);
-
-    const navigate = useNavigate();
 
     // Reseteo al cambiar el filtro de búsqueda
     useEffect(() => {

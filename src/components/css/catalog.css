@@ -4,7 +4,7 @@
 }
 
 .catalog-background {
-    min-height: 100vh;
+    min-height: 100dvh;
     background: radial-gradient(at 85% 10%, #202020, black);
     position: relative;
 }

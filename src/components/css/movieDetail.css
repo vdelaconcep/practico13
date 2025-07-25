@@ -12,7 +12,7 @@
 
 .movieDetail-intDiv {
     width: 700px;
-    max-height: 100vh;
+    max-height: 100dvh;
     background-color: black;
     color: white;
     display: flex;
@@ -107,7 +107,7 @@
         width: 500px;
     }
     .movieDetail-overviewDiv {
-        height: calc(100vh - 280px);
+        height: calc(100dvh - 280px);
     }
 }
 
@@ -116,6 +116,6 @@
         font-size: 2em;
     }
     .movieDetail-overviewDiv {
-        height: calc(100vh - 180px);
+        height: calc(100dvh - 180px);
     }
 }

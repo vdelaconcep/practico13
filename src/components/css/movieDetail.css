@@ -12,7 +12,7 @@
 
 .movieDetail-intDiv {
     width: 700px;
-    max-height: 100dvh;
+    height: 100dvh;
     background-color: black;
     color: white;
     display: flex;

@@ -90,7 +90,7 @@ const List = ({filter, filterName, setSelectedGenre, setSelectedGenreName}) => {
             <section className='list-section m-0 ms-md-2 me-md-2 p-0 pb-3 text-white'>
                 
                 {(loading && !data) ? <div className='list-loading'>
-                    <i className="fa-solid fa-spinner fa-spin d-block loading-spinner"></i>
+                    <i className="fa-solid fa-spinner fa-spin d-block list-loadingSpinner"></i>
                     <p className='text-center mt-3'>Loading...</p>
                 </div> :
                 (data ? 

@@ -89,26 +89,25 @@ const List = ({filter, filterName, setSelectedGenre, setSelectedGenreName}) => {
             <h3 className='list-filter m-4'>{listTitle}</h3>
             <section className='list-section m-0 ms-md-2 me-md-2 p-0 pb-3 text-white'>
                 
-                {(loading && !data) ? <div className='list-loading'>
+                {(loading && !data) ? <article className='list-loading'>
                     <i className="fa-solid fa-spinner fa-spin d-block list-loadingSpinner"></i>
                     <p className='text-center mt-3'>Loading...</p>
-                </div> :
+                </article> :
                 (data ? 
                     (data.results.map(movie => (
-                        <div
+                        <article
                             key={movie.id}
-                            className='list-movieDiv'
+                            className='list-movieCard'
                             onClick={() => {
                                 setChosenMovie(movie.id);
                                 setShowChosenMovie(true);
                             }}>
-                                
-                            <article className='list-moviePosterArticle'>
-                                <img className='list-moviePoster' src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : noImage} alt={`${movie.original_title} movie poster`} />
-                            </article>
+                                <div className='list-moviePosterArticle'>
+                                    <img className='list-moviePoster' src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : noImage} alt={`${movie.original_title} movie poster`} />
+                                </div>
 
-                            <h5 className='list-movieTitle text-center mt-1 mb-3'>{movie.title}</h5>
-                        </div> 
+                                <h5 className='list-movieTitle text-center mt-1 mb-3'>{movie.title}</h5>
+                        </article>
                     ))) :
                     (<p className='list-unableToLoadtext-center'>Unable to load movies. Please try again.</p>)
                 )}

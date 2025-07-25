@@ -35,8 +35,9 @@
     font-size: 5em;
 }
 
-.list-movieDiv {
+.list-movieCard {
     cursor: pointer;
+    width: 170px;
 }
 
 .list-moviePosterArticle {
@@ -45,20 +46,29 @@
     border: 3px solid transparent;
 }
 
-.list-moviePoster,
-.list-movieTitle {
-    display: block;
+.list-moviePoster {
     width: 170px;
+    aspect-ratio: 500/750;
 }
 
-.list-moviePoster {
-    aspect-ratio: 500/750;
+.list-movieTitle {
+    font-size: 1.1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 @media (max-width: 768px) {
 
     .list-moviePoster,
-    .list-movieTitle {
+    .list-movieCard {
         width: 150px;
     }
 
@@ -71,12 +81,25 @@
 @media (max-width: 576px) {
 
     .list-moviePoster,
-    .list-movieTitle {
+    .list-movieCard {
         width: 120px;
     }
 
     .list-section {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 2px;
+    }
+}
+
+@media (max-width: 363px) {
+
+    .list-moviePoster,
+    .list-movieCard {
+        width: 150px;
+    }
+
+    .list-section {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 2px;
     }
 }

@@ -40,12 +40,25 @@ const Catalog = () => {
 
     const titleFilter = submittedTitle ? `/search/movie?query=${encodeURIComponent(submittedTitle)}&` : null;
 
-    // Si vuelvo a buscar por género, se inhabilita la búsqueda por título
+    // Si vuelvo a buscar por género, se resetea la búsqueda por título
     useEffect(() => {
-        setSearchTitle(false);
-        setSubmittedTitle('');
-        setTitle('');
+        if (selectedGenre !== '') {
+            setSearchTitle(false);
+            setSubmittedTitle('');
+            setTitle('');
+        };
     }, [selectedGenre]);
+
+    // Si busco por título, se resetea la búsqueda por género
+    useEffect(() => {
+        if (submittedTitle !== '') {
+            setSelectedGenre('');
+            setSelectedGenreName('');
+        };
+
+    }, [submittedTitle])
+
+
 
     return (
         <>

@@ -7,10 +7,12 @@
     background-position: center;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .movieDetail-intDiv {
     width: 700px;
+    max-height: 100vh;
     background-color: black;
     color: white;
     display: flex;

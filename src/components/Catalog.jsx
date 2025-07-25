@@ -51,8 +51,8 @@ const Catalog = () => {
         <>
             <div className='catalog-background'>
                 <header className='d-block d-md-flex align-items-md-center'>
-                    <h1 className="text-white catalog-headerTitle mt-2 mb-2 m-md-0 ms-md-4 d-flex justify-content-center justify-content-md-start"><span className='catalog-headerTitle-hal'>HAL</span><span className='catalog-headerTitle-movies'>Movies</span></h1>
-                    <div className='d-flex ms-0 ms-md-auto mt-2 mt-md-0 me-md-4 justify-content-md-end justify-content-center gap-2' >
+                    <h1 className="text-white catalog-headerTitle mt-2 mb-1 m-md-0 ms-md-4 d-flex justify-content-center justify-content-md-start"><span className='catalog-headerTitle-hal'>HAL</span><span className='catalog-headerTitle-movies'>Movies</span></h1>
+                    <div className='d-flex ms-0 ms-md-auto mt-md-0 me-md-4 justify-content-md-end justify-content-center' >
                         <div className='catalog-selectDiv'>
                             <select
                                 className='catalog-selectGenre'

@@ -92,6 +92,7 @@ const Catalog = () => {
                             e.preventDefault();
                             setSearchTitle(true);
                             setSubmittedTitle(title);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}>
                             <div className='catalog-searchDiv ms-2 ms-md-4'>
                                 <input
